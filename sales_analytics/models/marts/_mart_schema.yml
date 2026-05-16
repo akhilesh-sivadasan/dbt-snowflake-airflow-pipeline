@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: >
+      Fact table: one row per order with revenue, payment,
+      and delivery metrics.
+    columns:
+      - name: order_id
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+      - name: delivery_status
+        tests:
+          - accepted_values:
+              values: ['on_time', 'late', 'pending']
+
+  - name: dim_customers
+    description: >
+      Customer dimension with lifetime metrics and segmentation.
+    columns:
+      - name: customer_id
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+      - name: customer_segment
+        tests:
+          - accepted_values:
+              values: ['high_value', 'repeat', 'recent', 'at_risk', 'never_purchased']
+
+  - name: mart_seller_performance
+    description: >
+      Seller performance with revenue, volume, and delivery metrics.
+    columns:
+      - name: seller_id
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
