@@ -21,7 +21,14 @@ An enterprise-grade data transformation and orchestration pipeline that processe
 
 The linear dependency map executed seamlessly across the modern Airflow control plane:
 
-*(Drop your saved Airflow Graph Screenshot right here on your GitHub web interface after saving this file!)*
+<img width="1466" height="828" alt="to lo lola le" src="https://github.com/user-attachments/assets/05ef9d19-5f1e-487a-b0f7-47ede68c0d9a" />
+
+### 🌲 Internal dbt Model Lineage
+
+The internal data dependencies, staging schemas, intermediate joins, and final star-schema dimensional transformations managed inside Snowflake:
+
+<img width="1171" height="733" alt="Pasted Graphic 1" src="https://github.com/user-attachments/assets/ecf1166d-1b19-4a5e-a30b-8aff0e79e0d0" />
+
 
 -----
 
